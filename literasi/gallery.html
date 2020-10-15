@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>GoLite</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css?family=Poppins:400,500,600,700&display=swap&subset=latin-ext');
+
+        *,html{
+        padding: 0;
+        margin: 0;
+        overflow-x: hidden;
+        font-family: 'Poppins', sans-serif;
+        }
+
+        .container{
+            background: url('assets/img/background.png') no-repeat;
+            background-position: center;
+        }
+
+        ul{
+            list-style: none;
+        }
+
+        nav{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin: 2em 3em;
+        }
+
+        nav ul{
+            list-style: none;
+        }
+
+        nav ul li{
+            display: inline-block;
+        }
+
+        a{
+            color: linear-gradient(154.57deg, #A33992 2.89%, rgba(255, 255, 255, 0) 100%), #2E0AA8;
+            text-decoration: none;
+            font-weight: 600;
+            padding: 0 2em;
+            cursor: pointer;
+        }
+
+        a:hover, a.active{
+            text-decoration: underline;
+            color: linear-gradient(154.57deg, #A33992 2.89%, rgba(255, 255, 255, 0) 100%), #2E0AA8;
+        }
+        
+        #logo img{
+            width: 60px;
+            height: 60px;
+        }
+
+        .logo-img{
+            position: absolute;
+        }
+
+        .logo-content{
+            font-size: 1.25em;
+            font-weight: bold;
+            margin-left: 7em;
+        }
+
+        h1{
+            font-size: 2em;
+            margin: 2em 0;
+            padding: 0;
+            color: #2E0AA8;
+            text-align: center;
+        }
+
+        h1::after{
+            content: "";
+            display: block;
+            width: 3.5em;
+            border: 2px solid #2E0AA8;
+            margin: 0.5em auto;
+        }
+
+
+        #galeri{
+            margin: 0 6em;
+        }
+
+        #galeri>.content{
+            display: flex;
+            flex-direction: row;
+            justify-content: space-evenly;
+            margin: 2em 0;
+        }
+
+        footer {
+    width: 100%;
+    background: #d8cac1;
+    padding: 0;
+    margin: 0;
+}
+
+.footer-box{
+    display: flex;
+    flex-flow: row;
+    margin: 3em;
+}
+
+.footer-logo{
+    width: 100px;
+    height: 100px;
+    padding: 2em 0;
+}
+
+.footer-content{
+    display: flex;
+    flex-flow: row;
+    margin: 0 3em;
+}
+
+.footer-content ul li{
+    width: 300px;
+    font-weight: normal;
+    color: #4f4f4f;
+    padding: 0.25em 0;
+}
+
+.footer-content ul li a{
+    color: #4f4f4f;
+    font-weight: 400;
+}
+
+span p{
+    margin: 2em 0;
+    color: #4f4f4f;
+    font-weight: bold;
+    text-align: center;
+}
+        @media screen and (max-width: 767px){
+            .logo-content{
+                margin: 0 7em;
+            }
+
+            nav a#toggle-btn::after{
+                justify-content: space-between;
+                content: "|||";
+                transform: rotate(-90deg);
+                width: 50px;
+                height: 50px;
+                display: inline-block;
+                position: absolute;
+                right: 2em;
+                top: 2em;
+            }
+
+            nav ul, nav:active ul{
+                display: none;
+                position: absolute;
+                padding: 20px;
+                background: #764EB9;
+                right: 10px;
+                top: 65px;
+                width: 45%;
+                cursor: pointer;
+            }
+
+            nav:hover ul{
+                display: block;
+                cursor: pointer;
+            }
+
+            nav li{
+                text-align: center;
+                width: 50%;
+                padding: 2em 0;
+                margin: 0;
+            }
+
+            nav ul li a {
+                color: #ffffff;
+            }
+
+            #galeri>.content{
+                align-items: center;
+                display: flex;
+                flex-direction: column;
+            }
+
+            #galeri>.content>.gallery{
+                margin: 1em 0;
+            }
+
+            .footer-box{
+                margin: 2em 1em;
+            }
+
+            .footer-content{
+                margin: 0 -2em;
+            }
+
+            .footer-logo img{
+                width: 50px;
+                height: 50px;
+            }
+
+            .footer-content ul li{
+                width: 150px;
+                font-size: 10px;
+            }
+        }
+    </style>
+    <link rel="shortcut icon" href="assets/img/favicon.png" type="image/x-icon">
+</head>
+<body>
+    <div class="container">
+        <nav>
+            <div class="logo">
+                <div class="logo-img">
+                    <a href="#"><img src="assets/img/favicon.png" alt=""></a>
+                </div>
+
+                <div class="logo-content">
+                    <a href="index.html" id="toggle-btn"><p>GoLite</p></a>
+                </div>
+            </div>
+            <ul>
+                <li><a href="index.html">Beranda</a></li>
+                <li><a href="#">Edukasi</a></li>
+                <li><a href="gallery.html" class="active">Galeri</a></li>
+                <li><a href="#">Tentang</a></li>
+            </ul>
+        </nav>
+
+        <a name="galeri"></a>
+        <div id="galeri">
+            <h1>Galeri</h1>
+            <div class="content">
+                <div class="gallery">
+                    <a href="assets/img/ilus-galeri.png" target="_blank" id="poster"><img src="assets/img/ilus-galeri.png"></a>
+                </div>
+
+                <div class="gallery">
+                    <a href="assets/img/ilus-galeri2.png" target="_blank" id="digital"><img src="assets/img/ilus-galeri2.png" alt=""></a>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+<footer>
+    <div class="footer-box">
+        <div class="footer-logo">
+            <img src="assets/img/favicon.png" alt="">
+        </div>
+
+        <div class="footer-content">
+            <ul>
+                <li style="font-weight: bold; margin-left: 2em">Beranda</li>
+                <li><a href="index.html#referensi">Referensi</a></li>
+                <li><a href="index.html#literasi">Macam Literasi</a></li>
+                <li><a href="index.html#laman">Laman Kami</a></li>
+                <li><a href="index.html#komentar">Komentar</a></li>
+            </ul>
+
+            <ul>
+                <li style="font-weight: bold; margin-left: 2em">Edukasi</li>
+                <li><a href="#">Membaca Buku</a></li>
+                <li><a href="#">Anti Hoax</a></li>
+                <li><a href="#">Hidup Sehat</a></li>
+                <li><a href="#">Lestarikan Budaya</a></li>
+            </ul>
+
+            <ul>
+                <li style="font-weight: bold; margin-left: 2em">Galeri</li>
+                <li><a href="#poster">Poster Buku</a></li>
+                <li><a href="#digital">Poster Digital</a></li>
+            </ul>
+
+            <ul>
+                <li style="font-weight: bold; text-align:left">Tentang</li>
+                <li><img src="assets/img/maps.png" alt=""> GoLite, Jl. D.I Panjaitan No.128</li>
+                <li><img src="assets/img/envelope.png" alt=""> zeroteam@gmail.com</li>
+            </ul>
+        </div>
+    </div>
+    <span><p>Copyright &copy; 2019, GoLite Inc. All Rights Reserved.</p></span>
+</footer>
+</html>

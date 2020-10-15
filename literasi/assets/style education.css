@@ -1,0 +1,345 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins:400,500,600,700&display=swap&subset=latin-ext');
+*,html{
+    padding: 0;
+    margin: 0;
+    overflow-x: hidden;
+    font-family: 'Poppins', sans-serif;
+}
+.background{
+    background: url('img/background.png');
+}
+body{
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100vh;
+}
+ul{
+    list-style: none;
+}
+.container{
+    background: linear-gradient(146.52deg, #29D7EF 10.91%, rgba(255, 255, 255, 0) 101.26%), #2E0AA8;
+    margin: 0 auto;
+    color: #ffffff;
+    padding: 1em 0.5em;
+}
+nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 2em;
+    margin: 0 2em;
+}
+
+nav ul{
+    list-style: none;
+    position: relative;
+}
+
+nav ul li{
+    display: inline-block;
+    padding: 20px;
+    cursor: pointer;
+}
+a{
+    text-decoration: none;
+    font-weight: 600;
+    cursor: pointer;
+    color: #ffffff;
+}
+nav ul li a{
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+a:hover, a:active{
+    text-decoration: underline;
+}
+
+@media only screen and (max-width: 6px){
+    .header{
+        position: absolute;
+    }
+    #menu-icon{
+        background: url('img/menu.png');
+        display: inline-block;
+        width: 30px;
+        height: 30px;
+    }
+    
+    nav ul, nav:active ul{
+        display: none;
+        position: absolute;
+        padding: 20px;
+        background: #2E0AA8;
+        right: 10px;
+        top: 65px;
+        width: 35%;
+    }
+
+    nav:hover ul{
+        display: block;
+    }
+
+    nav li{
+        text-align: center;
+        width: 100%;
+        padding: 2em 0;
+        margin: 0;
+        cursor: pointer;
+    }
+}
+
+#logo{
+    display: inline-flex;
+}
+#logo img{
+    float: left;
+    padding-right: 5px;
+    width: 60px;
+    height: 60px;
+}
+
+
+nav>#logo p{
+    font-size: 1.25em;
+    font-weight: bold;
+    margin-left: 1.23em;
+    margin-top: 0.5em;
+    display: inline-flex;
+}
+
+.content{
+    display: flex;
+    flex-flow: wrap;
+}
+.hero{
+    text-align: left;
+    margin: 6em 4em;
+}
+.hero h1{
+    font-size: 2em;
+    width: 400px;
+    font-weight: 600;
+}
+.hero p:before{
+    margin: 1em 0;
+}
+.hero p{
+    font-size: 1em;
+    font-weight: normal;
+    padding: 0;
+    margin: 3em 0;
+}
+button {
+    border: none;
+    outline: none;
+    background: #ffffff;
+    box-shadow: #A33992;
+    color: #2E0AA8;
+    border-radius: 10px;
+    width: 180px;
+    height: 50px;
+    text-decoration: none;
+    font-size: 1em;
+    font-weight: 500;
+    cursor: pointer;
+}
+
+button a{
+    text-decoration: none;
+    text-align: center;
+}
+
+.illus img{
+    width: 600px;
+    margin: 4em 2em;
+}
+
+@media only screen and (max-width: 640px){
+    .content{
+        display: flex;
+        flex-flow: column-reverse;
+        text-align: center;
+    }
+    .hero{
+        margin: 3em 2em;
+        text-align: center;
+    }
+    .hero h1{
+        font-size: 1.25em;
+        font-weight: 700;
+    }
+    .hero p{
+        font-size: 0.5em;
+        font-weight: 500;
+    }
+    button{
+        outline: none;
+        border: none;
+        background: #ffffff;
+        color: #2E0AA8;
+        border-radius: 10px;
+        width: 120px;
+        height: 30px;
+        text-decoration: none;
+        font-size: 0.5em;
+        font-weight: 500;
+        cursor: pointer;
+    }
+    .illus{
+        text-align: center;
+    }
+    .illus img{
+        text-align: center;
+        width: 300px;
+        margin: 2em 2em;
+    }
+}
+
+#features{
+    padding: 0;
+    padding: 0;
+}
+
+#features h1{
+    font-size: 2em;
+    margin: 2em 0;
+    padding: 0;
+    color: #A33992;
+    text-align: center;
+}
+
+#features h1::after{
+    content: "";
+    display: block;
+    width: 3.5em;
+    border: 2px solid #A33992;
+    margin: 0.5em auto;
+}
+
+#features>.box{
+    margin: 2em 4em;
+    display: flex;
+    flex-direction: column;
+}
+
+
+#features .isi{
+    margin: 1.5em;
+    text-align: justify;
+    width: 500px;
+}
+
+.isi h2{
+    font-size: 2em;
+    font-weight: 600;
+    padding: 0.5em 0;
+}
+
+.image1{
+    margin-top: -50px;
+}
+.image2{
+    margin-top: -30px;
+}
+#features img{
+    width: 400px;
+    height: 400px;
+}
+
+#features button{
+    outline: none;
+    border: none;
+    background: linear-gradient(154.57deg, #A33992 2.89%, rgba(255, 255, 255, 0) 100%), #2E0AA8;
+    color: #ffffff;
+    border-radius: 10px;
+    width: 180px;
+    height: 50px;
+    text-decoration: none;
+    font-size: 0.75em;
+    font-weight: 500;
+    margin: 2em 0;
+    cursor: pointer;
+}
+
+.satu-content{
+    display: grid;
+    grid-gap: 20px;
+    grid-template-columns: repeat(2, 1fr);
+    text-align: left;
+    margin: 2em 4em;
+}
+nav a#toggle-btn::after{
+    justify-content: space-between;
+    content: "|||";
+    transform: rotate(-90deg);
+    width: 50px;
+    height: 50px;
+    display: inline-block;
+    position: none;
+    right: 2em;
+    top: 1em;
+}
+.dua-content{
+    display: grid;
+    grid-gap: 20px;
+    grid-template-columns: repeat(2, 1fr);
+    text-align: left;
+    margin: 2em 4em;
+}
+
+.dua-content img{
+    display: grid;
+    grid-gap: 20px;
+    grid-template-columns: repeat(2, 1fr);
+    text-align: left;
+    margin: 0 0 0 6em;
+}
+
+
+@media screen and (max-width: 640px) {
+    .satu-content{
+        display: flex;
+        flex-flow: column;
+        text-align: center;
+    }
+    .dua-content{
+        display: flex;
+        flex-flow: column-reverse;
+        text-align: center;
+    }
+    #features img{
+        width: 200px;
+        height: 200px;
+        margin: 0 0.5em;
+    }
+    #features button{
+        outline: none;
+        border: none;
+        background: linear-gradient(154.57deg, #A33992 2.89%, rgba(255, 255, 255, 0) 100%), #2E0AA8;
+        color: #ffffff;
+        border-radius: 10px;
+        width: 120px;
+        height: 30px;
+        text-decoration: none;
+        font-size: 0.5em;
+        font-weight: 500;
+        cursor: pointer;
+    }
+    #features .isi{
+        margin: 0.5em;
+        text-align: justify;
+        width: 200px;
+    }
+    
+    .isi h2{
+        text-align: center;
+        font-size: 2em;
+        font-weight: 600;
+        padding: 0.5em 0;
+    }
+    
+}
